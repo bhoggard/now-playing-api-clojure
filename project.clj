@@ -1,5 +1,5 @@
 (defproject now-playing-api "0.1.0"
-  :description "clojure API to show what's playing on my favorite classical stations"
+  :description "Clojure API to retrieve what's playing on my favorite streaming stations"
   :url "http://example.com/FIXME"
   :min-lein-version "2.0.0"
   :dependencies [[org.clojure/clojure "1.8.0"]

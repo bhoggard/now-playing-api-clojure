@@ -1,0 +1,251 @@
+{
+  "current_playlist_item": {
+    "catalog_entry": {
+      "reclabel": {
+        "url": "",
+        "name": "Innova"
+      },
+      "conductor": null,
+      "catno": "764",
+      "composer": {
+        "url": "/musicians/kristin-kuster/",
+        "pk": 8200,
+        "slug": "kristin-kuster",
+        "name": "Kristin Kuster"
+      },
+      "attribution": "",
+      "soloists": [{
+        "instruments": ["saxophone"],
+        "musician": {
+          "url": "/musicians/timothy-mcallister/",
+          "pk": 6889,
+          "slug": "timothy-mcallister",
+          "name": "Timothy McAllister"
+        },
+        "role": ""
+      }, {
+        "instruments": ["piano"],
+        "musician": {
+          "url": "/musicians/lucia-unrau/",
+          "pk": 8201,
+          "slug": "lucia-unrau",
+          "name": "Lucia Unrau"
+        },
+        "role": ""
+      }],
+      "title": "Jellyfish",
+      "url": "http://www.wqxr.org/recordings/15143/",
+      "additional_composers": [],
+      "audio_may_download": true,
+      "length": 595,
+      "pk": 15143,
+      "arkiv_link": "http://www.arkivmusic.com/classical/Playlist?source=WQXR&cat=764&id=117085&label=Innova",
+      "audio": "",
+      "ensemble": null,
+      "additional_ensembles": []
+    },
+    "start_time_ts": 1475727462.0,
+    "stream": "q2",
+    "playlist_entry_id": 1308743,
+    "start_time": "2016-10-06T00:17:42",
+    "playlist_page_url": "http://www.wqxr.org/playlists/show/living-music-living-composers/2016/oct/06/",
+    "comments_url": "/api/list/comments/177/52010/"
+  },
+  "expires": "2016-10-06T00:27:47",
+  "current_show": {
+    "description": "<p>A home for immersive festival programming, composer insights, live audio and video webcasts and access to today\u2019s leading new-music performers and venues.</p>",
+    "fullImage": {
+      "url": "https://media2.wnyc.org/i/300/300/c/80/1/q2music_1.png",
+      "width": 300,
+      "caption": "",
+      "type": "image/png",
+      "height": 300
+    },
+    "start_ts": 1475726400.0,
+    "listImage": {
+      "url": "https://media2.wnyc.org/i/60/60/c/80/1/q2music_1.png",
+      "width": 60,
+      "caption": "",
+      "type": "image/png",
+      "height": 60
+    },
+    "pk": 346736,
+    "show_url": "http://www.wqxr.org/programs/living-music-living-composers/",
+    "end": "2016-10-06T06:00:00-0400",
+    "title": "Living Music, Living Composers",
+    "url": "http://www.wqxr.org/programs/living-music-living-composers/",
+    "end_ts": 1475748000.0,
+    "schedule_ref": "ShowSchedule:941",
+    "group_slug": "living-music-living-composers",
+    "detailImage": {
+      "url": "https://media2.wnyc.org/i/60/60/c/80/1/q2music_1.png",
+      "width": 60,
+      "caption": "",
+      "type": "image/png",
+      "height": 60
+    },
+    "start": "2016-10-06T00:00:00-0400"
+  },
+  "future": [{
+    "catalog_entry": {
+      "reclabel": {
+        "url": "",
+        "name": "Parlour Tapes+"
+      },
+      "conductor": null,
+      "catno": "",
+      "composer": {
+        "url": "/musicians/ben-hjertmann/",
+        "pk": 16075,
+        "slug": "ben-hjertmann",
+        "name": "Ben Hjertmann"
+      },
+      "attribution": "",
+      "soloists": [],
+      "title": "String Quartet No. 2, Etude",
+      "url": "http://www.wqxr.org/recordings/36510/",
+      "additional_composers": [],
+      "audio_may_download": true,
+      "length": 768,
+      "pk": 36510,
+      "arkiv_link": "http://www.arkivmusic.com/classical/Playlist?source=WQXR&cat=&id=137116&label=Parlour+Tapes%2B",
+      "audio": "",
+      "ensemble": {
+        "url": "/ensembles/spektral-quartet/",
+        "pk": 3404,
+        "slug": "spektral-quartet",
+        "name": "Spektral Quartet"
+      },
+      "additional_ensembles": []
+    },
+    "start_time_ts": 1475728069.0,
+    "stream": "q2",
+    "playlist_entry_id": 1308748,
+    "start_time": "2016-10-06T00:27:49",
+    "playlist_page_url": "http://www.wqxr.org/playlists/show/living-music-living-composers/2016/oct/06/",
+    "comments_url": "/api/list/comments/177/52010/"
+  }],
+  "has_playlists": true,
+  "previous": [{
+    "catalog_entry": {
+      "reclabel": {
+        "url": "",
+        "name": "Naive"
+      },
+      "conductor": {
+        "url": "/musicians/pascal-rophe/",
+        "pk": 9863,
+        "slug": "pascal-rophe",
+        "name": "Pascal Roph\u00e9"
+      },
+      "catno": "782181",
+      "composer": {
+        "url": "/musicians/pascal-dusapin/",
+        "pk": 8438,
+        "slug": "pascal-dusapin",
+        "name": "Pascal Dusapin"
+      },
+      "attribution": "",
+      "soloists": [{
+        "instruments": ["flute"],
+        "musician": {
+          "url": "/musicians/juliette-hurel/",
+          "pk": 10158,
+          "slug": "juliette-hurel",
+          "name": "Juliette Hurel"
+        },
+        "role": ""
+      }],
+      "title": "Galim",
+      "url": "http://www.wqxr.org/recordings/19391/",
+      "additional_composers": [],
+      "audio_may_download": true,
+      "length": 558,
+      "pk": 19391,
+      "arkiv_link": "http://www.arkivmusic.com/classical/Playlist?source=WQXR&cat=782181&id=118270&label=Naive",
+      "audio": "",
+      "ensemble": {
+        "url": "/ensembles/orchestre-national-de-montpellier/",
+        "pk": 2046,
+        "slug": "orchestre-national-de-montpellier",
+        "name": "Orchestre National de Montpellier"
+      },
+      "additional_ensembles": []
+    },
+    "start_time_ts": 1475726903.0,
+    "stream": "q2",
+    "playlist_entry_id": 1308742,
+    "start_time": "2016-10-06T00:08:23",
+    "playlist_page_url": "http://www.wqxr.org/playlists/show/living-music-living-composers/2016/oct/06/",
+    "comments_url": "/api/list/comments/177/52010/"
+  }, {
+    "catalog_entry": {
+      "reclabel": {
+        "url": "",
+        "name": "Q2 Music"
+      },
+      "conductor": null,
+      "catno": "Private Recording",
+      "composer": {
+        "url": "/musicians/krzysztof-penderecki/",
+        "pk": 725,
+        "slug": "krzysztof-penderecki",
+        "name": "Krzysztof Penderecki"
+      },
+      "attribution": "",
+      "soloists": [{
+        "instruments": ["clarinet"],
+        "musician": {
+          "url": "/musicians/eric-anderson/",
+          "pk": 19640,
+          "slug": "eric-anderson",
+          "name": "Eric Anderson"
+        },
+        "role": ""
+      }, {
+        "instruments": ["violin"],
+        "musician": {
+          "url": "/musicians/nathan-lesser/",
+          "pk": 19641,
+          "slug": "nathan-lesser",
+          "name": "Nathan Lesser"
+        },
+        "role": ""
+      }, {
+        "instruments": ["viola"],
+        "musician": {
+          "url": "/musicians/colin-brookes/",
+          "pk": 19642,
+          "slug": "colin-brookes",
+          "name": "Colin Brookes"
+        },
+        "role": ""
+      }, {
+        "instruments": ["cello"],
+        "musician": {
+          "url": "/musicians/alan-okhubo/",
+          "pk": 19643,
+          "slug": "alan-okhubo",
+          "name": "Alan Okhubo"
+        },
+        "role": ""
+      }],
+      "title": "Quartet for clarinet and strings (Penderecki Live from Symphony Space on Oct. 25, 2013)",
+      "url": "http://www.wqxr.org/recordings/47010/",
+      "additional_composers": [],
+      "audio_may_download": true,
+      "length": 941,
+      "pk": 47010,
+      "arkiv_link": "http://www.arkivmusic.com/classical/Playlist?source=WQXR&cat=Private+Recording&id=137370&label=Q2+Music",
+      "audio": "",
+      "ensemble": null,
+      "additional_ensembles": []
+    },
+    "start_time_ts": 1475725951.0,
+    "stream": "q2",
+    "playlist_entry_id": 1308729,
+    "start_time": "2016-10-05T23:52:31",
+    "playlist_page_url": "http://www.wqxr.org/playlists/show/living-music-living-composers/2016/oct/05/",
+    "comments_url": "/api/list/comments/177/52006/"
+  }]
+}

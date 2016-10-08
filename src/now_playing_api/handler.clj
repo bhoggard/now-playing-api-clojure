@@ -3,11 +3,12 @@
             [compojure.route :as route]
             [ring.middleware.json :refer [wrap-json-response]]
             [ring.middleware.defaults :refer [wrap-defaults api-defaults]]
-            [ring.util.response :refer [response]]))
+            [ring.util.response :refer [response]]
+            [now-playing-api.feed :as feed]))
 
 (defroutes app-routes
   (context "/api" []
-    (GET "/q2" [] (response {:title "Asyla" :composer "Thomas Ades"})))
+    (GET "/q2" [] (response (feed/q2))))
   (route/not-found "Not Found"))
 
 (def app
