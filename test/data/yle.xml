@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RMPADEXPORT>
+   <ITEM TYPE="music" ALBUM="BRAHMS: SYMPHONY NO.1" TITLE="Sinfonia nro 1 c-molli " SITE_ID="1022" DURATION="2844312" KEYWORDS="OKLASS CD-30376-01-04" OBJECT_ID="48516" STARTING_TIME="2016-10-15 21:46:44" PLAYOUT_PROGRAMME_ID="294327" PLAYOUT_PROGRAMME_NAME="Iltaklassinen.">
+      <ROLES>
+         <ROLE>
+            <ROLE_NAME>PERFORMER</ROLE_NAME>
+            <PERSON_NAME>Barenboim, Daniel (johtaja)</PERSON_NAME>
+         </ROLE>
+         <ROLE>
+            <ROLE_NAME>PERFORMER</ROLE_NAME>
+            <PERSON_NAME>Chicago Symphony Orchestra (Chicagon sinfoniaorkesteri) (orkesteri)</PERSON_NAME>
+         </ROLE>
+         <ROLE>
+            <ROLE_NAME>COMPOSER</ROLE_NAME>
+            <PERSON_NAME>Brahms, Johannes [1833-1897]</PERSON_NAME>
+         </ROLE>
+      </ROLES>
+      <PUBLISH-DATA SIDE="1" TITLE="Sinfonia nro 1 c-molli " RECORD="4509 948172(1)" COMPANY="Erato" COUNTRY="Saksa" TRACKNO="0" DURATION="2844">
+         <TEXT TYPE="ingress">Brahms: Sinfonia n:o 1 c-molli (Chicagon SO/Daniel Barenboim).</TEXT>
+      </PUBLISH-DATA>
+   </ITEM>
+</RMPADEXPORT>
