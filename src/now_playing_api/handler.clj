@@ -5,6 +5,7 @@
             [ring.middleware.json :refer [wrap-json-response]]
             [ring.middleware.defaults :refer [wrap-defaults api-defaults]]
             [ring.util.response :refer [response]]
+            [ring.middleware.cors :refer [wrap-cors]]
             [ring.adapter.jetty :as jetty]
             [now-playing-api.feed :as feed]))
 
@@ -20,6 +21,7 @@
 
 (def app
   (-> app-routes
+      (wrap-cors :access-control-allow-origin [#".*"] :access-control-allow-methods [:get])
       (wrap-json-response)
       (wrap-defaults api-defaults)))
 

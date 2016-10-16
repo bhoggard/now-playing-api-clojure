@@ -6,7 +6,8 @@
                  [compojure "1.5.1"]
                  [ring/ring-defaults "0.2.1"]
                  [ring/ring-json "0.4.0"]
-                 [ring/ring "1.5.0"]]
+                 [ring/ring "1.5.0"]
+                 [ring-cors "0.1.8"]]
   :plugins [[lein-ring "0.9.7"]]
   :ring {:handler now-playing-api.handler/app}
   :uberjar-name "now-playing-api-standalone.jar"
