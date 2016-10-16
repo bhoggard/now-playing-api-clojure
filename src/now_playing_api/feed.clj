@@ -1,11 +1,6 @@
-(ns now-playing-api.feed)
-
-(def counterstream-url "http://counterstreamradio.net/admin/services.php?q=current_track")
-(def earwaves-url "http://api.somafm.com/recent/earwaves.tre.xml")
-(def dronezone-url "http://api.somafm.com/recent/dronezone.tre.xml")
-(def q2-url "http://www.wqxr.org/api/whats_on/q2/2/")
-(def silent-channel-url "http://api.somafm.com/recent/silent.tre.xml")
-(def yle-url "http://yle.fi/radiomanint/LiveXML/r17/item(0).xml")
+(ns now-playing-api.feed
+  (:require [cheshire.core :as json]
+            [clojure.xml :as xml]))
 
 (defn translate-counterstream
   "translate parsed JSON into title and composer for Counterstream Radi"
@@ -41,4 +36,34 @@
         composer (-> composer-info last :content first)]
     (hash-map :title title :composer composer)))
 
-(defn q2 [] {:title "Asyla" :composer "Thomas Ades"})
+(defn feed-to-data
+  "given a url and a format (:json or :xml), retrieve and parse a feed"
+  [url feed-format]
+  (if (= feed-format :json)
+    (-> url slurp json/parse-string)
+    (-> url xml/parse)))
+
+(defn- wrap-feed-errors
+  "wrap outside http calls so we can trap them"
+  [f]
+  (try
+    (f)
+    (catch Exception e (hash-map :title "" :composer ""))))
+
+(def feeds {
+  :counterstream { :url "http://counterstreamradio.net/admin/services.php?q=current_track" :format :json }
+  :dronezone { :url "http://api.somafm.com/recent/dronezone.tre.xml" :format :xml }
+  :earwaves { :url "http://api.somafm.com/recent/earwaves.tre.xml" :format :xml }
+  :q2 { :url "http://www.wqxr.org/api/whats_on/q2/2/" :format :json }
+  :silent-channel { :url "http://api.somafm.com/recent/silent.tre.xml" :format :xml }
+  :yle { :url "http://yle.fi/radiomanint/LiveXML/r17/item(0).xml" :format :xml }
+})
+
+(defn feed-data
+  "given the name of a feed, retrieve it, process the data, and return title and composer"
+  [feed-name]
+  (let [feed-url (get-in feeds [feed-name :url])
+        feed-format (get-in feeds [feed-name :format])
+        data (feed-to-data feed-url feed-format)
+        translation-fn (or (resolve (symbol (str "now-playing-api.feed/translate-" (name feed-name)))) translate-somafm)]
+        (translation-fn data)))

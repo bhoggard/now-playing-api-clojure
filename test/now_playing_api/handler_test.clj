@@ -6,4 +6,7 @@
 (deftest test-app
   (testing "not-found route"
     (let [response (app (mock/request :get "/invalid"))]
-      (is (= (:status response) 404)))))
+      (is (= (:status response) 404))))
+  (testing "/api/q2"
+    (let [response (app (mock/request :get "/api/q2"))]
+      (is (= (:status response) 200)))))
