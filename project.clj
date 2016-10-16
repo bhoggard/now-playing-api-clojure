@@ -10,7 +10,9 @@
   :plugins [[lein-ring "0.9.7"]]
   :ring {:handler now-playing-api.handler/app}
   :uberjar-name "now-playing-api-standalone.jar"
-  :main ^:skip-aot now-playing-api.handler
+  :main now-playing-api.handler
   :profiles
   {:dev {:dependencies [[javax.servlet/servlet-api "2.5"]
-                        [ring/ring-mock "0.3.0"]]}})
+                        [ring/ring-mock "0.3.0"]]}
+   :uberjar {:aot :all}
+   })

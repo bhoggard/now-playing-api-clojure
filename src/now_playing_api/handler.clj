@@ -1,4 +1,5 @@
 (ns now-playing-api.handler
+  (:gen-class)
   (:require [compojure.core :refer :all]
             [compojure.route :as route]
             [ring.middleware.json :refer [wrap-json-response]]
