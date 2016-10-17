@@ -43,13 +43,6 @@
     (-> url slurp json/parse-string)
     (-> url xml/parse)))
 
-(defn- wrap-feed-errors
-  "wrap outside http calls so we can trap them"
-  [f]
-  (try
-    (f)
-    (catch Exception e (hash-map :title "" :composer ""))))
-
 (def feeds {
   :counterstream { :url "http://counterstreamradio.net/admin/services.php?q=current_track" :format :json }
   :dronezone { :url "http://api.somafm.com/recent/dronezone.tre.xml" :format :xml }
