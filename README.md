@@ -18,6 +18,6 @@ To start a web server for the application, run:
 
 ## License
 
-Copyright © Barry Hoggard
+Copyright © 2016 Barry Hoggard
 
-Distributed under the Eclipse Public License either version 1.0 or (at your option) any later version.
+MIT License. See [LICENSE](LICENSE).
