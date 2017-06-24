@@ -2,14 +2,14 @@
   (:require [cheshire.core :as json]
             [clojure.xml :as xml]))
 
-(defn translate-counterstream
-  "translate parsed JSON into title and composer for Counterstream Radio"
-  [data]
-  (let [entry (data "TrackInfo")
-        title (entry "Track")
-        composer (entry "Composer")]
+(defn counterstream-data
+  "special case of simple text processing for Counterstream Radio"
+  []
+  (let [data (slurp "http://counterstream.newmusicusa.org:8000/currentsong?sid=1")
+        items (clojure.string/split data, #" - ")
+        title (second items)
+        composer (first items)]
     (hash-map :title title :composer composer)))
-
 
 (defn translate-somafm
   "translate parsed XML into title and composer/creator for SomaFM feeds"
@@ -45,7 +45,6 @@
     (xml/parse url)))
 
 (def feeds {
-            :counterstream { :url "http://counterstreamradio.net/admin/services.php?q=current_track" :format :json}
             :dronezone { :url "http://api.somafm.com/recent/dronezone.tre.xml" :format :xml}
             :earwaves { :url "http://api.somafm.com/recent/earwaves.tre.xml" :format :xml}
             :q2 { :url "http://www.wqxr.org/api/whats_on/q2/2/" :format :json}
@@ -60,4 +59,4 @@
         feed-format (get-in feeds [feed-name :format])
         data (feed-to-data feed-url feed-format)
         translation-fn (or (resolve (symbol (str "now-playing-api.feed/translate-" (name feed-name)))) translate-somafm)]
-       (translation-fn data)))
+    (translation-fn data)))
