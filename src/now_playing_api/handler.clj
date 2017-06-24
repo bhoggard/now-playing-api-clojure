@@ -4,14 +4,13 @@
             [compojure.route :as route]
             [ring.middleware.json :refer [wrap-json-response]]
             [ring.middleware.defaults :refer [wrap-defaults api-defaults]]
-            [ring.util.response :refer [response]]
+            [ring.util.response :refer [response not-found]]
             [ring.middleware.cors :refer [wrap-cors]]
             [ring.adapter.jetty :as jetty]
             [now-playing-api.feed :as feed]))
 
 (defroutes app-routes
   (context "/api" []
-    (GET "/counterstream" [] (response (feed/feed-data :counterstream)))
     (GET "/dronezone" [] (response (feed/feed-data :dronezone)))
     (GET "/earwaves" [] (response (feed/feed-data :earwaves)))
     (GET "/q2" [] (response (feed/feed-data :q2)))
@@ -24,8 +23,3 @@
       (wrap-cors :access-control-allow-origin [#".*"] :access-control-allow-methods [:get])
       (wrap-json-response)
       (wrap-defaults api-defaults)))
-
-; server
-(defn -main []
-  (let [port (Integer/parseInt (get (System/getenv) "PORT" "3000"))]
-    (jetty/run-jetty app {:port port})))

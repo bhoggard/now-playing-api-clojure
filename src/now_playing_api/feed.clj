@@ -3,12 +3,13 @@
             [clojure.xml :as xml]))
 
 (defn translate-counterstream
-  "translate parsed JSON into title and composer for Counterstream Radi"
+  "translate parsed JSON into title and composer for Counterstream Radio"
   [data]
   (let [entry (data "TrackInfo")
         title (entry "Track")
         composer (entry "Composer")]
     (hash-map :title title :composer composer)))
+
 
 (defn translate-somafm
   "translate parsed XML into title and composer/creator for SomaFM feeds"
@@ -41,16 +42,16 @@
   [url feed-format]
   (if (= feed-format :json)
     (-> url slurp json/parse-string)
-    (-> url xml/parse)))
+    (xml/parse url)))
 
 (def feeds {
-  :counterstream { :url "http://counterstreamradio.net/admin/services.php?q=current_track" :format :json }
-  :dronezone { :url "http://api.somafm.com/recent/dronezone.tre.xml" :format :xml }
-  :earwaves { :url "http://api.somafm.com/recent/earwaves.tre.xml" :format :xml }
-  :q2 { :url "http://www.wqxr.org/api/whats_on/q2/2/" :format :json }
-  :silent-channel { :url "http://api.somafm.com/recent/silent.tre.xml" :format :xml }
-  :yle { :url "http://yle.fi/radiomanint/LiveXML/r17/item(0).xml" :format :xml }
-})
+            :counterstream { :url "http://counterstreamradio.net/admin/services.php?q=current_track" :format :json}
+            :dronezone { :url "http://api.somafm.com/recent/dronezone.tre.xml" :format :xml}
+            :earwaves { :url "http://api.somafm.com/recent/earwaves.tre.xml" :format :xml}
+            :q2 { :url "http://www.wqxr.org/api/whats_on/q2/2/" :format :json}
+            :silent-channel { :url "http://api.somafm.com/recent/silent.tre.xml" :format :xml}
+            :yle { :url "https://yle.fi/radiomanint/LiveXML/r17/item(0).xml" :format :xml}})
+
 
 (defn feed-data
   "given the name of a feed, retrieve it, process the data, and return title and composer"
@@ -59,4 +60,4 @@
         feed-format (get-in feeds [feed-name :format])
         data (feed-to-data feed-url feed-format)
         translation-fn (or (resolve (symbol (str "now-playing-api.feed/translate-" (name feed-name)))) translate-somafm)]
-        (translation-fn data)))
+       (translation-fn data)))

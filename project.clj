@@ -1,6 +1,8 @@
 (defproject now-playing-api "0.1.0"
   :description "Clojure API to retrieve what's playing on my favorite streaming stations"
   :url "https://now-playing-api.herokuapp.com/"
+  :license {:name "MIT License"
+            :url "http://www.opensource.org/licenses/mit-license.php"}
   :min-lein-version "2.0.0"
   :dependencies [[org.clojure/clojure "1.8.0"]
                  [compojure "1.5.1"]
