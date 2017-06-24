@@ -23,3 +23,8 @@
       (wrap-cors :access-control-allow-origin [#".*"] :access-control-allow-methods [:get])
       (wrap-json-response)
       (wrap-defaults api-defaults)))
+
+; server
+(defn -main []
+  (let [port (Integer/parseInt (get (System/getenv) "PORT" "3000"))]
+    (jetty/run-jetty app {:port port})))
