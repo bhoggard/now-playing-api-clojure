@@ -5,10 +5,6 @@
             [now-playing-api.feed :refer :all]))
 
 (deftest test-feed
-  (testing "counterstream parsing"
-    (let [data (translate-counterstream (parse-string (slurp "test/data/counterstream.json")))]
-      (is (= "Walk Through Resonant Landscape No 5.1" (:title data)))
-      (is (= "Frances White" (:composer data)))))
   (testing "earwaves parsing"
     (let [data (translate-somafm (xml/parse "test/data/earwaves.xml"))]
       (is (= "Feldman: Rothko Chapel 2" (:title data)))
