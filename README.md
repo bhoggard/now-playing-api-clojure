@@ -18,6 +18,6 @@ To start a web server for the application, run:
 
 ## License
 
-Copyright © 2016 Barry Hoggard
+Copyright © 2018 Barry Hoggard
 
 MIT License. See [LICENSE](LICENSE).
