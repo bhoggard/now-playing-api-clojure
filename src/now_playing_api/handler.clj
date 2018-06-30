@@ -13,7 +13,6 @@
   (context "/api" []
     (GET "/counterstream" [] (response (feed/counterstream-data)))
     (GET "/dronezone" [] (response (feed/feed-data :dronezone)))
-    (GET "/earwaves" [] (response (feed/feed-data :earwaves)))
     (GET "/q2" [] (response (feed/feed-data :q2)))
     (GET "/silent-channel" [] (response (feed/feed-data :silent-channel)))
     (GET "/yle" [] (response (feed/feed-data :yle))))

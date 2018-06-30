@@ -46,7 +46,6 @@
 
 (def feeds {
             :dronezone { :url "http://api.somafm.com/recent/dronezone.tre.xml" :format :xml}
-            :earwaves { :url "http://api.somafm.com/recent/earwaves.tre.xml" :format :xml}
             :q2 { :url "https://api.wnyc.org/api/v1/whats_on/q2/" :format :json}
             :silent-channel { :url "http://api.somafm.com/recent/silent.tre.xml" :format :xml}
             :yle { :url "https://yle.fi/radiomanint/LiveXML/r17/item(0).xml" :format :xml}})
